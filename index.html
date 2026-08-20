@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NorthTrip — авторские путешествия по Европе</title>
+<meta name="description" content="NorthTrip — авторские путешествия по Европе для тех, кому важны эмоции, а не галочки в списке. Малые группы, продуманные маршруты, подбор тура под вас.">
+<meta name="theme-color" content="#0b1622">
+<meta property="og:title" content="NorthTrip — авторские путешествия по Европе">
+<meta property="og:description" content="Фьорды, Альпы, океан и старые города. Маршруты, которые собирают люди, а не алгоритмы.">
+<meta property="og:image" content="images/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="#hero" aria-label="NorthTrip — на главную">
+      <img src="images/logo.png" alt="" width="44" height="44">
+      <span class="logo__text">North<span>Trip</span><small>авторские маршруты</small></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="#directions">Направления</a>
+      <a href="#tours">Туры</a>
+      <a href="#included">Что входит</a>
+      <a href="#gallery">Фото</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contacts">Контакты</a>
+      <a class="nav__cta btn btn--primary btn--sm" href="#form">Подобрать тур</a>
+    </nav>
+
+    <div class="header__side">
+      <a class="header__phone" href="tel:+78124567890">+7 812 456-78-90</a>
+      <a class="btn btn--primary btn--sm header__btn" href="#form">Подобрать тур</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__media">
+    <img src="images/hero.jpg" alt="Фьорд на рассвете: горы, снежные вершины и спокойная вода" fetchpriority="high">
+  </div>
+  <div class="container hero__inner">
+    <p class="hero__kicker reveal">Авторские путешествия по Европе · 2026–2027</p>
+    <h1 class="hero__title reveal">Европа, которую<br>не показывают <em>в путеводителях</em></h1>
+    <p class="hero__text reveal">Маленькие группы до 12 человек, маршруты от людей, которые прожили эти места, и ни одного дня, потраченного на очереди и суету.</p>
+    <div class="hero__actions reveal">
+      <a class="btn btn--primary btn--lg" href="#form">Подобрать путешествие</a>
+      <a class="btn btn--ghost btn--lg" href="#tours">Смотреть туры</a>
+    </div>
+    <ul class="hero__stats reveal" aria-label="Коротко о нас">
+      <li><span class="num" data-count="2400" data-suffix="+">0</span><span class="lbl">путешественников с нами</span></li>
+      <li><span class="num" data-count="4.9" data-decimals="1">0</span><span class="lbl">средняя оценка поездки</span></li>
+    </ul>
+  </div>
+  <a class="hero__scroll" href="#directions" aria-label="К направлениям"><span></span>листайте вниз</a>
+</section>
+
+<!-- ============ DIRECTIONS ============ -->
+<section class="section directions" id="directions">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Популярные направления</p>
+      <h2 class="section__title">Куда мы ездим чаще всего</h2>
+      <p class="section__lead">Шесть направлений, за которые нас любят. Выберите то, что откликается, — покажем подходящие даты и маршруты.</p>
+    </header>
+
+    <div class="dir-grid">
+      <article class="dir-card dir-card--wide reveal" data-filter="north">
+        <img src="images/dest-norway.jpg" alt="Норвежские фьорды" loading="lazy">
+        <div class="dir-card__body">
+          <span class="dir-card__tag">Север</span>
+          <h3>Норвегия</h3>
+          <p>Фьорды, рыбацкие деревни и северное сияние над Лофотенами.</p>
+          <span class="dir-card__meta">6 маршрутов · от 189 900 ₽</span>
+        </div>
+      </article>
+
+      <article class="dir-card reveal" data-filter="north">
+        <img src="images/dest-iceland.jpg" alt="Исландия: ледники и вулканические долины" loading="lazy">
+        <div class="dir-card__body">
+          <span class="dir-card__tag">Север</span>
+          <h3>Исландия</h3>
+          <p>Водопады, чёрные пляжи и горячие источники под открытым небом.</p>
+          <span class="dir-card__meta">4 маршрута · от 214 500 ₽</span>
+        </div>
+      </article>
+
+      <article class="dir-card reveal" data-filter="city">
+        <img src="images/dest-italy.jpg" alt="Итальянский город на закате" loading="lazy">
+        <div class="dir-card__body">
+          <span class="dir-card__tag">Города</span>
+          <h3>Италия</h3>
+          <p>Рим, Флоренция и холмы Тосканы — без беготни и туристических ловушек.</p>
+          <span class="dir-card__meta">7 маршрутов · от 164 000 ₽</span>
+        </div>
+      </article>
+
+      <article class="dir-card reveal" data-filter="mountains">
+        <img src="images/dest-swiss.jpg" alt="Швейцарские Альпы" loading="lazy">
+        <div class="dir-card__body">
+          <span class="dir-card__tag">Горы</span>
+          <h3>Швейцария</h3>
+          <p>Панорамные поезда, альпийские тропы и деревни на высоте 2000 метров.</p>
+          <span class="dir-card__meta">5 маршрутов · от 197 300 ₽</span>
+        </div>
+      </article>
+
+      <article class="dir-card reveal" data-filter="coast">
+        <img src="images/dest-portugal.jpg" alt="Океанское побережье Португалии" loading="lazy">
+        <div class="dir-card__body">
+          <span class="dir-card__tag">Побережье</span>
+          <h3>Португалия</h3>
+          <p>Атлантика, скалы Алгарве и вечерние улицы Лиссабона.</p>
+          <span class="dir-card__meta">5 маршрутов · от 148 700 ₽</span>
+        </div>
+      </article>
+
+      <article class="dir-card dir-card--wide reveal" data-filter="mountains">
+        <img src="images/dest-scotland.jpg" alt="Шотландский Хайленд" loading="lazy">
+        <div class="dir-card__body">
+          <span class="dir-card__tag">Горы</span>
+          <h3>Шотландия</h3>
+          <p>Хайленд, озёра, замки и вискикурни с историей в три века.</p>
+          <span class="dir-card__meta">3 маршрута · от 172 400 ₽</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOURS ============ -->
+<section class="section tours" id="tours">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Ближайшие туры</p>
+      <h2 class="section__title">Даты, на которые ещё можно попасть</h2>
+      <p class="section__lead">Группы набираются за 2–3 месяца. Если даты не подходят — соберём маршрут под вас.</p>
+    </header>
+
+    <div class="filters reveal" role="group" aria-label="Фильтр туров">
+      <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">Все туры</button>
+      <button type="button" class="chip" data-filter="mountains" aria-pressed="false">Горы</button>
+      <button type="button" class="chip" data-filter="city" aria-pressed="false">Города</button>
+      <button type="button" class="chip" data-filter="coast" aria-pressed="false">Побережье</button>
+      <button type="button" class="chip" data-filter="north" aria-pressed="false">Север</button>
+    </div>
+
+    <p class="sr-only" role="status" id="tourStatus"></p>
+
+    <div class="tour-grid" id="tourGrid">
+
+      <article class="tour reveal" data-cat="north mountains" data-id="norway">
+        <div class="tour__media">
+          <img src="images/tour-1.jpg" alt="Фьорды Норвегии" loading="lazy">
+          <span class="tour__badge">Осталось 3 места</span>
+        </div>
+        <div class="tour__body">
+          <h3 class="tour__dir">Норвегия · Лофотены и фьорды</h3>
+          <ul class="tour__facts">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>Берген — Лофотены</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>8 дней / 7 ночей</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>12–19 октября 2026</li>
+          </ul>
+          <p class="tour__desc">Ночёвки в рыбацких домиках рорбу, морская прогулка по Тролль-фьорду и три вечера охоты за северным сиянием с гидом-астрофотографом.</p>
+          <div class="tour__foot">
+            <p class="tour__price"><span>189 900 ₽</span><small>за человека</small></p>
+            <button class="btn btn--primary btn--sm js-more" data-id="norway">Подробнее</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour reveal" data-cat="north" data-id="iceland">
+        <div class="tour__media">
+          <img src="images/tour-2.jpg" alt="Исландия" loading="lazy">
+          <span class="tour__badge">Хит сезона</span>
+        </div>
+        <div class="tour__body">
+          <h3 class="tour__dir">Исландия · Огонь и лёд</h3>
+          <ul class="tour__facts">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>Кольцевая дорога</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>7 дней / 6 ночей</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>3–9 ноября 2026</li>
+          </ul>
+          <p class="tour__desc">Ледниковая лагуна Йёкюльсаурлоун, чёрные пляжи Вика, прогулка по леднику с инструктором и вечера в горячих источниках вдали от толп.</p>
+          <div class="tour__foot">
+            <p class="tour__price"><span>214 500 ₽</span><small>за человека</small></p>
+            <button class="btn btn--primary btn--sm js-more" data-id="iceland">Подробнее</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour reveal" data-cat="city" data-id="italy">
+        <div class="tour__media">
+          <img src="images/tour-3.jpg" alt="Италия" loading="lazy">
+          <span class="tour__badge">Для первого раза</span>
+        </div>
+        <div class="tour__body">
+          <h3 class="tour__dir">Италия · Рим, Флоренция, Тоскана</h3>
+          <ul class="tour__facts">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>3 города + винодельни</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>9 дней / 8 ночей</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>5–13 сентября 2026</li>
+          </ul>
+          <p class="tour__desc">Утренний Рим до открытия музеев, ужин у флорентийского шефа и два дня среди холмов Валь-д’Орча с дегустацией в семейном хозяйстве.</p>
+          <div class="tour__foot">
+            <p class="tour__price"><span>164 000 ₽</span><small>за человека</small></p>
+            <button class="btn btn--primary btn--sm js-more" data-id="italy">Подробнее</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour reveal" data-cat="coast" data-id="portugal">
+        <div class="tour__media">
+          <img src="images/tour-4.jpg" alt="Побережье Португалии" loading="lazy">
+          <span class="tour__badge">Мягкий климат</span>
+        </div>
+        <div class="tour__body">
+          <h3 class="tour__dir">Португалия · Лиссабон и океан</h3>
+          <ul class="tour__facts">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>Лиссабон — Алгарве</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>8 дней / 7 ночей</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>20–27 сентября 2026</li>
+          </ul>
+          <p class="tour__desc">Скалы мыса Рока, серфинг-урок для новичков, фаду в маленьком баре Алфамы и три дня на побережье Алгарве без экскурсионной гонки.</p>
+          <div class="tour__foot">
+            <p class="tour__price"><span>148 700 ₽</span><small>за человека</small></p>
+            <button class="btn btn--primary btn--sm js-more" data-id="portugal">Подробнее</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour reveal" data-cat="mountains" data-id="swiss">
+        <div class="tour__media">
+          <img src="images/tour-5.jpg" alt="Швейцарские Альпы" loading="lazy">
+          <span class="tour__badge">Зимние даты</span>
+        </div>
+        <div class="tour__body">
+          <h3 class="tour__dir">Швейцария · Альпы и поезда</h3>
+          <ul class="tour__facts">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>Церматт — Гриндельвальд</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>6 дней / 5 ночей</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>14–19 декабря 2026</li>
+          </ul>
+          <p class="tour__desc">Ледниковый экспресс с панорамными окнами, подъём к Маттерхорну, вечерние сыроварни и один день полностью свободен для лыж или прогулок.</p>
+          <div class="tour__foot">
+            <p class="tour__price"><span>197 300 ₽</span><small>за человека</small></p>
+            <button class="btn btn--primary btn--sm js-more" data-id="swiss">Подробнее</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour reveal" data-cat="mountains north" data-id="scotland">
+        <div class="tour__media">
+          <img src="images/tour-6.jpg" alt="Шотландский Хайленд" loading="lazy">
+          <span class="tour__badge">Малая группа · 8 человек</span>
+        </div>
+        <div class="tour__body">
+          <h3 class="tour__dir">Шотландия · Хайленд и замки</h3>
+          <ul class="tour__facts">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>Эдинбург — Скай</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>7 дней / 6 ночей</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>1–7 октября 2026</li>
+          </ul>
+          <p class="tour__desc">Остров Скай в лучший месяц года, пешие тропы по долине Гленко, ночь в историческом поместье и дегустация на семейной вискикурне.</p>
+          <div class="tour__foot">
+            <p class="tour__price"><span>172 400 ₽</span><small>за человека</small></p>
+            <button class="btn btn--primary btn--sm js-more" data-id="scotland">Подробнее</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="tours__empty" id="toursEmpty" hidden>По этому фильтру пока нет дат. <a href="#form">Оставьте заявку</a> — соберём маршрут под вас.</p>
+
+    <div class="tours__cta reveal">
+      <p>Не нашли подходящие даты или хотите свой маршрут?</p>
+      <a class="btn btn--primary" href="#form">Подобрать тур под меня</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INCLUDED ============ -->
+<section class="section included" id="included">
+  <div class="container included__grid">
+    <div class="included__media reveal">
+      <img src="images/photo2.jpg" alt="Вечерний город во время путешествия" loading="lazy">
+      <div class="included__note">
+        <strong>Без скрытых доплат</strong>
+        <span>Финальная стоимость фиксируется в договоре и не меняется</span>
+      </div>
+    </div>
+
+    <div class="included__content">
+      <header class="section__head section__head--left reveal">
+        <p class="eyebrow">Что входит в тур</p>
+        <h2 class="section__title">Вы платите один раз — дальше только впечатления</h2>
+      </header>
+
+      <ul class="incl-list">
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15.5l18-6.2-2.2-3.1-4.3 1.4-6-4.1-2.2.8 3.7 4.9-3.7 1.2-2.6-1.7-1.6.6 2 3.6z"/></svg>
+          <div><h3>Перелёт и трансферы</h3><p>Билеты туда-обратно, все переезды по маршруту и встреча в аэропорту.</p></div>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-9M3 12h13a4 4 0 0 1 4 4v2M3 18h18"/><circle cx="7.5" cy="9" r="2"/></svg>
+          <div><h3>Проживание 3–4★</h3><p>Отели и гостевые дома, отобранные вручную: центр, вид или тишина.</p></div>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20c.9-3.8 3.8-5.8 7.5-5.8s6.6 2 7.5 5.8"/></svg>
+          <div><h3>Русскоязычный гид</h3><p>С вами весь маршрут: местные истории, помощь и решение любых вопросов.</p></div>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v13H4z"/><path d="M4 10.5h16M9 6.5V4M15 6.5V4"/></svg>
+          <div><h3>Экскурсии и билеты</h3><p>Входные билеты в музеи и парки без очередей — всё куплено заранее.</p></div>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l7 3v5.2c0 4.3-2.9 7.6-7 8.8-4.1-1.2-7-4.5-7-8.8V6.5z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>
+          <div><h3>Страховка</h3><p>Медицинская страховка с покрытием активного отдыха на весь период.</p></div>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v8a3 3 0 0 0 6 0V3M10 11v10M17 3c-1.5 2-2 4-2 6s.5 3 2 3v9"/></svg>
+          <div><h3>Завтраки и 2 ужина</h3><p>Плюс гастрономические вечера в местах, куда обычно не попадают туристы.</p></div>
+        </li>
+      </ul>
+
+      <p class="incl-extra reveal">Отдельно оплачиваются: виза (помогаем с документами), обеды и личные расходы. Мы честно говорим об этом до бронирования.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="section why" id="why">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Почему выбирают нас</p>
+      <h2 class="section__title">Мы делаем поездки, в которые сами ездим</h2>
+      <p class="section__lead">За девять лет мы отказались от автобусных марафонов и «галочек». Осталось только то, ради чего стоит лететь.</p>
+    </header>
+
+    <ul class="why__facts reveal" aria-label="NorthTrip в цифрах">
+      <li><span class="num" data-count="9">0</span><span class="lbl">лет собираем маршруты</span></li>
+      <li><span class="num" data-count="18">0</span><span class="lbl">стран Европы в программе</span></li>
+    </ul>
+
+    <div class="why__grid">
+      <article class="why__card reveal">
+        <span class="why__num">01</span>
+        <h3>Группы до 12 человек</h3>
+        <p>Все успевают увидеть, спросить и сфотографировать. Никаких флажков и наушников на 40 человек.</p>
+      </article>
+      <article class="why__card reveal">
+        <span class="why__num">02</span>
+        <h3>Маршруты от местных</h3>
+        <p>Каждый маршрут собирал человек, который живёт в этой стране. Мы проходим его сами перед продажей.</p>
+      </article>
+      <article class="why__card reveal">
+        <span class="why__num">03</span>
+        <h3>Свободное время каждый день</h3>
+        <p>Программа занимает 60% дня. Остальное — ваше: кофе, море, сон или своя прогулка.</p>
+      </article>
+      <article class="why__card reveal">
+        <span class="why__num">04</span>
+        <h3>Поддержка 24/7</h3>
+        <p>Куратор на связи с момента заявки и до возвращения домой. В любом часовом поясе.</p>
+      </article>
+      <article class="why__card why__card--wide reveal">
+        <div class="why__media"><img src="images/photo1.jpg" alt="Горы на закате" loading="lazy"></div>
+        <div class="why__quote">
+          <p>«Мы считаем поездку удачной, если через год вы помните не список мест, а один конкретный вечер».</p>
+          <span>Анна Северова, основатель NorthTrip</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section gallery" id="gallery">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Фото с прошлых поездок</p>
+      <h2 class="section__title">Снято нашими путешественниками</h2>
+      <p class="section__lead">Без стоков и ретуши — только кадры из групп 2024–2026 годов.</p>
+    </header>
+  </div>
+
+  <div class="gal-grid container">
+    <button class="gal-item gal-item--tall reveal" data-full="images/gal-1.jpg" data-caption="Перевал на закате, Доломиты · июнь 2026">
+      <img src="images/gal-1.jpg" alt="Горный перевал на закате" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+    </button>
+    <button class="gal-item reveal" data-full="images/gal-2.jpg" data-caption="Вечерний Лиссабон · сентябрь 2025">
+      <img src="images/gal-2.jpg" alt="Вечерний город с огнями" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+    </button>
+    <button class="gal-item reveal" data-full="images/gal-3.jpg" data-caption="Атлантика у мыса Рока · май 2025">
+      <img src="images/gal-3.jpg" alt="Океанское побережье" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+    </button>
+    <button class="gal-item gal-item--tall reveal" data-full="images/gal-4.jpg" data-caption="Утро во фьорде, Лофотены · март 2026">
+      <img src="images/gal-4.jpg" alt="Утро во фьорде" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+    </button>
+    <button class="gal-item gal-item--wide reveal" data-full="images/gal-5.jpg" data-caption="Холмы Тосканы · сентябрь 2025">
+      <img src="images/gal-5.jpg" alt="Холмы на рассвете" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+    </button>
+    <button class="gal-item reveal" data-full="images/gal-6.jpg" data-caption="Скалы Алгарве · октябрь 2025">
+      <img src="images/gal-6.jpg" alt="Скалы над океаном" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+    </button>
+    <button class="gal-item gal-item--wide reveal" data-full="images/gal-7.jpg" data-caption="Синий час в Порту · апрель 2026">
+      <img src="images/gal-7.jpg" alt="Город в синий час" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+    </button>
+    <button class="gal-item reveal" data-full="images/gal-8.jpg" data-caption="Хайленд после дождя · октябрь 2025">
+      <img src="images/gal-8.jpg" alt="Шотландские холмы после дождя" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+    </button>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Отзывы</p>
+      <h2 class="section__title">Что говорят те, кто уже съездил</h2>
+    </header>
+
+    <div class="slider reveal" id="slider">
+      <div class="slider__viewport">
+        <div class="slider__track" id="sliderTrack">
+
+          <article class="review">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review__text">Ехали вдвоём и боялись групповых туров. Оказалось, это просто 10 человек, которые вместе завтракают и расходятся гулять. Гид Марк знал в Бергене каждую кофейню. Сияние поймали на третий вечер — стояли на пирсе и молчали.</p>
+            <footer class="review__author">
+              <span class="ava" aria-hidden="true">ЕК</span>
+              <span><strong>Екатерина Л.</strong><small>Норвегия, октябрь 2025</small></span>
+            </footer>
+          </article>
+
+          <article class="review">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review__text">Первая поездка в Европу после долгого перерыва, и всё организовали за меня: визу, перелёт, отели. Мне оставалось прийти в аэропорт. Отдельное спасибо за свободные дни — я гуляла по Флоренции своим темпом.</p>
+            <footer class="review__author">
+              <span class="ava" aria-hidden="true">МД</span>
+              <span><strong>Мария Д.</strong><small>Италия, сентябрь 2025</small></span>
+            </footer>
+          </article>
+
+          <article class="review">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review__text">Исландия в ноябре звучала как авантюра. По факту — тёплый автобус, продуманные остановки и ни одного дня «переезд ради переезда». Ледник с инструктором стоил всей поездки.</p>
+            <footer class="review__author">
+              <span class="ava" aria-hidden="true">АС</span>
+              <span><strong>Антон С.</strong><small>Исландия, ноябрь 2025</small></span>
+            </footer>
+          </article>
+
+          <article class="review">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review__text">Летели с ребёнком 9 лет, переживали, что будет скучно. Куратор заранее переделала пару экскурсий под нас. В Португалии сын впервые встал на доску — теперь просит вернуться.</p>
+            <footer class="review__author">
+              <span class="ava" aria-hidden="true">ОВ</span>
+              <span><strong>Ольга В.</strong><small>Португалия, май 2026</small></span>
+            </footer>
+          </article>
+
+          <article class="review">
+            <div class="review__stars" aria-label="Оценка 4 из 5">★★★★☆</div>
+            <p class="review__text">Маршрут по Швейцарии плотный, за шесть дней успели много. Единственное — хотелось бы ещё один свободный день в Церматте. Ребята честно предупредили об этом на созвоне, так что вопросов нет.</p>
+            <footer class="review__author">
+              <span class="ava" aria-hidden="true">ДК</span>
+              <span><strong>Дмитрий К.</strong><small>Швейцария, декабрь 2025</small></span>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="slider__controls">
+        <button class="slider__arrow" id="prevSlide" aria-label="Предыдущий отзыв">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <div class="slider__dots" id="sliderDots" role="group" aria-label="Выбор отзыва"></div>
+        <button class="slider__arrow" id="nextSlide" aria-label="Следующий отзыв">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="container faq__grid">
+    <header class="section__head section__head--left reveal">
+      <p class="eyebrow">Частые вопросы</p>
+      <h2 class="section__title">Отвечаем честно</h2>
+      <p class="section__lead">Не нашли свой вопрос? Напишите в форме — ответим в течение рабочего дня.</p>
+      <a class="btn btn--ghost btn--dark" href="#form">Задать вопрос</a>
+    </header>
+
+    <div class="faq__list reveal">
+      <details class="faq__item">
+        <summary>Как проходит подбор тура?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__answer"><p>Вы оставляете заявку, куратор связывается в течение 2 часов и задаёт 5–7 вопросов: даты, бюджет, темп, интересы. В течение дня присылаем 2–3 подходящих варианта с программой, ценой и честными комментариями — что понравится, а что может не подойти.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Нужна ли виза и помогаете ли вы с ней?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__answer"><p>Для стран Шенгена виза нужна. Мы даём список документов, проверяем анкету, готовим брони отелей и билетов и записываем в визовый центр. Консульский сбор оплачивается отдельно. При отказе по вине наших документов — возвращаем стоимость услуги.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Можно ли поехать одному?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__answer"><p>Да, около 40% наших путешественников едут в одиночку. Можно взять одноместное размещение за доплату или поселиться с попутчиком того же пола — тогда доплаты нет.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Какая физическая подготовка нужна?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__answer"><p>Для городских маршрутов — обычная: 8–12 км пешком в день. Для горных указываем уровень сложности в описании тура: от «прогулочного» до «требуется опыт трекинга». Куратор честно скажет, потянете ли вы конкретный маршрут.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Что с оплатой и возвратом?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__answer"><p>Бронь фиксируется предоплатой 30%, остаток — за 21 день до вылета. Возможна рассрочка на 6 месяцев без переплаты. При отмене более чем за 30 дней возвращаем всё, кроме фактических расходов (визы, невозвратные билеты).</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Сколько человек в группе и кто они?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__answer"><p>От 6 до 12 человек, чаще всего 8–10. Основной возраст — 25–45 лет: пары, друзья и самостоятельные путешественники. За неделю до вылета создаём чат группы, чтобы все познакомились заранее.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>А если я хочу свои даты и маршрут?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__answer"><p>Собираем индивидуальные маршруты под запрос: от двух человек, срок подготовки — от 3 недель. Стоимость обычно на 15–25% выше группового тура, зато всё расписание подстраивается под вас.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORM ============ -->
+<section class="section form-sec" id="form">
+  <div class="form-sec__bg"><img src="images/cta.jpg" alt="" loading="lazy"></div>
+  <div class="container form-sec__inner">
+
+    <div class="form-sec__intro reveal">
+      <p class="eyebrow eyebrow--light">Подбор путешествия</p>
+      <h2 class="section__title">Расскажите, куда хочется — остальное сделаем мы</h2>
+      <p class="form-sec__lead">Заполните форму за минуту. Куратор свяжется в течение 2 часов в рабочее время и пришлёт 2–3 варианта маршрута с ценами. Это бесплатно и ни к чему не обязывает.</p>
+      <ul class="form-sec__points">
+        <li>Ответ в течение 2 часов</li>
+        <li>Подбор бесплатный, без обязательств</li>
+        <li>Никакого спама и звонков «просто так»</li>
+      </ul>
+    </div>
+
+    <form class="form card reveal" id="leadForm" novalidate>
+      <div class="form__row">
+        <div class="field">
+          <label for="name">Как к вам обращаться<span aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Анна" autocomplete="name" required>
+          <span class="field__error" data-error="name"></span>
+        </div>
+        <div class="field">
+          <label for="phone">Телефон<span aria-hidden="true">*</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+          <span class="field__error" data-error="phone"></span>
+        </div>
+      </div>
+
+      <div class="form__row">
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="anna@mail.ru" autocomplete="email">
+          <span class="field__error" data-error="email"></span>
+        </div>
+        <div class="field">
+          <label for="direction">Направление</label>
+          <select id="direction" name="direction">
+            <option value="">Ещё не решили — предложите</option>
+            <option value="norway">Норвегия · Лофотены и фьорды</option>
+            <option value="iceland">Исландия · Огонь и лёд</option>
+            <option value="italy">Италия · Рим, Флоренция, Тоскана</option>
+            <option value="portugal">Португалия · Лиссабон и океан</option>
+            <option value="swiss">Швейцария · Альпы и поезда</option>
+            <option value="scotland">Шотландия · Хайленд и замки</option>
+            <option value="custom">Свой маршрут</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form__row">
+        <div class="field">
+          <label for="month">Когда планируете</label>
+          <input type="month" id="month" name="month" placeholder="2026-10">
+        </div>
+        <div class="field">
+          <label for="people">Сколько человек</label>
+          <select id="people" name="people">
+            <option value="1">1</option><option value="2" selected>2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5plus">5 и больше</option>
+          </select>
+        </div>
+      </div>
+
+      <fieldset class="field field--budget">
+        <legend>Бюджет на человека</legend>
+        <div class="radios">
+          <label><input type="radio" name="budget" value="до 150 000 ₽"><span>до 150 000 ₽</span></label>
+          <label><input type="radio" name="budget" value="150–200 000 ₽" checked><span>150–200 000 ₽</span></label>
+          <label><input type="radio" name="budget" value="200 000 ₽ и выше"><span>200 000 ₽ и выше</span></label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="comment">Что для вас важно в поездке</label>
+        <textarea id="comment" name="comment" rows="3" placeholder="Например: спокойный темп, горы, хочется увидеть океан"></textarea>
+      </div>
+
+      <label class="checkbox">
+        <input type="checkbox" id="agree" name="agree" required>
+        <span>Согласен на обработку персональных данных и получение ответа по заявке<span aria-hidden="true">*</span></span>
+      </label>
+      <span class="field__error" data-error="agree"></span>
+
+      <button class="btn btn--primary btn--lg btn--block" type="submit" id="submitBtn">Подобрать путешествие</button>
+      <p class="form__note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>. Обычно отвечаем за 40 минут.</p>
+
+      <div class="form__success" id="formSuccess" role="status" aria-live="polite" tabindex="-1" hidden>
+        <div class="form__success-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        </div>
+        <h3>Заявка принята</h3>
+        <p id="successText">Спасибо! Куратор свяжется с вами в течение 2 часов.</p>
+        <button type="button" class="btn btn--ghost btn--dark btn--sm" id="resetForm">Отправить ещё одну</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ CONTACTS ============ -->
+<section class="section contacts" id="contacts">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Контакты</p>
+      <h2 class="section__title">Мы рядом — и в офисе, и в мессенджерах</h2>
+    </header>
+
+    <div class="contacts__grid">
+      <a class="contact-card reveal" href="tel:+78124567890">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h3l1.7 4.2-2.1 1.5a12 12 0 0 0 5.2 5.2l1.5-2.1 4.2 1.7v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 6.7 2 2 0 0 1 6 3.5Z"/></svg>
+        <h3>+7 812 456-78-90</h3>
+        <p>Ежедневно с 10:00 до 21:00 по МСК</p>
+      </a>
+      <a class="contact-card reveal" href="mailto:hello@northtrip.ru">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.8 7l8.2 6 8.2-6"/></svg>
+        <h3>hello@northtrip.ru</h3>
+        <p>Ответим в течение рабочего дня</p>
+      </a>
+      <div class="contact-card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <h3>Санкт-Петербург</h3>
+        <p>наб. реки Мойки, 34, офис 210<br>Встречи — по договорённости</p>
+      </div>
+      <div class="contact-card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v13H4z"/><path d="M4 9h16"/><circle cx="7" cy="12.5" r="1"/><circle cx="11" cy="12.5" r="1"/></svg>
+        <h3>Мессенджеры</h3>
+        <p class="contact-card__links">
+          <a href="#">Telegram</a><a href="#">WhatsApp</a><a href="#">VK</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="contacts__strip reveal">
+      <div>
+        <strong>Ещё думаете?</strong>
+        <span>Оставьте заявку — пришлём подборку маршрутов и ответим на вопросы без давления.</span>
+      </div>
+      <a class="btn btn--primary" href="#form">Подобрать тур</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a class="logo logo--light" href="#hero">
+        <img src="images/logo.png" alt="" width="40" height="40">
+        <span class="logo__text">North<span>Trip</span><small>авторские маршруты</small></span>
+      </a>
+      <p>Авторские путешествия по Европе с 2017 года. Туроператор РТО № 021645.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Навигация в подвале">
+      <div>
+        <h4>Путешествия</h4>
+        <a href="#directions">Направления</a>
+        <a href="#tours">Ближайшие туры</a>
+        <a href="#included">Что входит</a>
+      </div>
+      <div>
+        <h4>О нас</h4>
+        <a href="#why">Почему мы</a>
+        <a href="#gallery">Фотографии</a>
+        <a href="#reviews">Отзывы</a>
+      </div>
+      <div>
+        <h4>Помощь</h4>
+        <a href="#faq">Вопросы и ответы</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#form">Подбор тура</a>
+      </div>
+    </nav>
+  </div>
+  <div class="container footer__bottom">
+    <p>© <span id="year">2026</span> NorthTrip. Все права защищены.</p>
+    <p><a href="#">Политика конфиденциальности</a> · <a href="#">Договор оферты</a></p>
+  </div>
+</footer>
+
+<!-- ============ TOUR MODAL ============ -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" data-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="modal__media"><img id="modalImg" src="" alt=""></div>
+    <div class="modal__body">
+      <p class="eyebrow" id="modalTag"></p>
+      <h3 id="modalTitle"></h3>
+      <ul class="modal__facts" id="modalFacts"></ul>
+      <p class="modal__lead" id="modalLead"></p>
+      <h4>Маршрут по дням</h4>
+      <ol class="modal__plan" id="modalPlan"></ol>
+      <div class="modal__foot">
+        <p class="tour__price"><span id="modalPrice"></span><small>за человека, всё включено</small></p>
+        <button class="btn btn--primary" id="modalCta">Оставить заявку</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" hidden>
+  <button class="lightbox__close" data-lb-close aria-label="Закрыть просмотр">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Предыдущее фото">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <figure class="lightbox__figure">
+    <img id="lbImg" src="" alt="">
+    <figcaption id="lbCaption"></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Следующее фото">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+</div>
+
+<button class="to-top" id="toTop" aria-label="Наверх">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
