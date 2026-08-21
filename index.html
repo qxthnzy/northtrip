@@ -8,23 +8,543 @@
 <meta name="theme-color" content="#0b1622">
 <meta property="og:title" content="NorthTrip — авторские путешествия по Европе">
 <meta property="og:description" content="Фьорды, Альпы, океан и старые города. Маршруты, которые собирают люди, а не алгоритмы.">
-<meta property="og:image" content="images/hero.jpg">
+<meta property="og:image" content="https://northtrip.ru/images/hero.jpg">
+<meta property="og:image:width" content="2200">
+<meta property="og:image:height" content="1240">
+<meta property="og:site_name" content="NorthTrip">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://northtrip.ru/">
+<meta property="og:locale" content="ru_RU">
+<link rel="canonical" href="https://northtrip.ru/">
 <link rel="icon" href="images/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="preload" as="image" type="image/avif" fetchpriority="high"
+      imagesrcset="images/opt/hero-768.avif 768w, images/opt/hero-1200.avif 1200w, images/opt/hero-1600.avif 1600w, images/opt/hero-2200.avif 2200w"
+      imagesizes="100vw">
+
+<!-- ============ Микроразметка schema.org ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "@id": "https://northtrip.ru/#org",
+      "name": "NorthTrip",
+      "url": "https://northtrip.ru/",
+      "description": "Авторские путешествия по Европе для малых групп до 12 человек: продуманные маршруты, русскоязычные гиды, свободное время каждый день.",
+      "slogan": "Европа, которую не показывают в путеводителях",
+      "logo": "https://northtrip.ru/images/logo.png",
+      "image": "https://northtrip.ru/images/hero.jpg",
+      "telephone": "+7-812-456-78-90",
+      "email": "hello@northtrip.ru",
+      "foundingDate": "2017",
+      "priceRange": "148700–214500 ₽",
+      "currenciesAccepted": "RUB",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "наб. реки Мойки, 34, офис 210",
+        "addressLocality": "Санкт-Петербург",
+        "addressCountry": "RU"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "21:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "telephone": "+7-812-456-78-90",
+          "email": "hello@northtrip.ru",
+          "availableLanguage": [
+            "ru"
+          ]
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Норвегия"
+        },
+        {
+          "@type": "Place",
+          "name": "Исландия"
+        },
+        {
+          "@type": "Place",
+          "name": "Италия"
+        },
+        {
+          "@type": "Place",
+          "name": "Швейцария"
+        },
+        {
+          "@type": "Place",
+          "name": "Португалия"
+        },
+        {
+          "@type": "Place",
+          "name": "Шотландия"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.8,
+        "bestRating": 5,
+        "worstRating": 1,
+        "reviewCount": 5
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Екатерина Л."
+          },
+          "datePublished": "2025-10",
+          "reviewBody": "Ехали вдвоём и боялись групповых туров. Оказалось, это просто 10 человек, которые вместе завтракают и расходятся гулять. Гид Марк знал в Бергене каждую кофейню. Сияние поймали на третий вечер — стояли на пирсе и молчали.",
+          "itemReviewed": {
+            "@id": "https://northtrip.ru/#org"
+          }
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Мария Д."
+          },
+          "datePublished": "2025-09",
+          "reviewBody": "Первая поездка в Европу после долгого перерыва, и всё организовали за меня: визу, перелёт, отели. Мне оставалось прийти в аэропорт. Отдельное спасибо за свободные дни — я гуляла по Флоренции своим темпом.",
+          "itemReviewed": {
+            "@id": "https://northtrip.ru/#org"
+          }
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Антон С."
+          },
+          "datePublished": "2025-11",
+          "reviewBody": "Исландия в ноябре звучала как авантюра. По факту — тёплый автобус, продуманные остановки и ни одного дня «переезд ради переезда». Ледник с инструктором стоил всей поездки.",
+          "itemReviewed": {
+            "@id": "https://northtrip.ru/#org"
+          }
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Ольга В."
+          },
+          "datePublished": "2026-05",
+          "reviewBody": "Летели с ребёнком 9 лет, переживали, что будет скучно. Куратор заранее переделала пару экскурсий под нас. В Португалии сын впервые встал на доску — теперь просит вернуться.",
+          "itemReviewed": {
+            "@id": "https://northtrip.ru/#org"
+          }
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 4,
+            "bestRating": 5
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Дмитрий К."
+          },
+          "datePublished": "2025-12",
+          "reviewBody": "Маршрут по Швейцарии плотный, за шесть дней успели много. Единственное — хотелось бы ещё один свободный день в Церматте. Ребята честно предупредили об этом на созвоне, так что вопросов нет.",
+          "itemReviewed": {
+            "@id": "https://northtrip.ru/#org"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://northtrip.ru/#website",
+      "url": "https://northtrip.ru/",
+      "name": "NorthTrip — авторские путешествия по Европе",
+      "inLanguage": "ru-RU",
+      "publisher": {
+        "@id": "https://northtrip.ru/#org"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://northtrip.ru/#tours-list",
+      "name": "Ближайшие туры NorthTrip",
+      "numberOfItems": 6,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": [
+              "Product",
+              "TouristTrip"
+            ],
+            "@id": "https://northtrip.ru/#tour-norway",
+            "name": "Норвегия · Лофотены и фьорды",
+            "description": "Ночёвки в рыбацких домиках рорбу, морская прогулка по Тролль-фьорду и три вечера охоты за северным сиянием с гидом-астрофотографом. 8 дней / 7 ночей, маршрут Берген — Лофотены.",
+            "image": "https://northtrip.ru/images/tour-1.jpg",
+            "url": "https://northtrip.ru/#tours",
+            "brand": {
+              "@id": "https://northtrip.ru/#org"
+            },
+            "provider": {
+              "@id": "https://northtrip.ru/#org"
+            },
+            "category": "Групповой авторский тур",
+            "touristType": "Малые группы до 12 человек",
+            "startDate": "2026-10-12",
+            "endDate": "2026-10-19",
+            "itinerary": {
+              "@type": "Place",
+              "name": "Норвегия"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": 189900,
+              "priceCurrency": "RUB",
+              "availability": "https://schema.org/InStock",
+              "url": "https://northtrip.ru/#form",
+              "validThrough": "2026-10-12",
+              "seller": {
+                "@id": "https://northtrip.ru/#org"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": [
+              "Product",
+              "TouristTrip"
+            ],
+            "@id": "https://northtrip.ru/#tour-iceland",
+            "name": "Исландия · Огонь и лёд",
+            "description": "Ледниковая лагуна Йёкюльсаурлоун, чёрные пляжи Вика, прогулка по леднику с инструктором и вечера в горячих источниках вдали от толп. 7 дней / 6 ночей по кольцевой дороге.",
+            "image": "https://northtrip.ru/images/tour-2.jpg",
+            "url": "https://northtrip.ru/#tours",
+            "brand": {
+              "@id": "https://northtrip.ru/#org"
+            },
+            "provider": {
+              "@id": "https://northtrip.ru/#org"
+            },
+            "category": "Групповой авторский тур",
+            "touristType": "Малые группы до 12 человек",
+            "startDate": "2026-11-03",
+            "endDate": "2026-11-09",
+            "itinerary": {
+              "@type": "Place",
+              "name": "Исландия"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": 214500,
+              "priceCurrency": "RUB",
+              "availability": "https://schema.org/InStock",
+              "url": "https://northtrip.ru/#form",
+              "validThrough": "2026-11-03",
+              "seller": {
+                "@id": "https://northtrip.ru/#org"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": [
+              "Product",
+              "TouristTrip"
+            ],
+            "@id": "https://northtrip.ru/#tour-italy",
+            "name": "Италия · Рим, Флоренция, Тоскана",
+            "description": "Утренний Рим до открытия музеев, ужин у флорентийского шефа и два дня среди холмов Валь-д’Орча с дегустацией в семейном хозяйстве. 9 дней / 8 ночей, 3 города и винодельни.",
+            "image": "https://northtrip.ru/images/tour-3.jpg",
+            "url": "https://northtrip.ru/#tours",
+            "brand": {
+              "@id": "https://northtrip.ru/#org"
+            },
+            "provider": {
+              "@id": "https://northtrip.ru/#org"
+            },
+            "category": "Групповой авторский тур",
+            "touristType": "Малые группы до 12 человек",
+            "startDate": "2026-09-05",
+            "endDate": "2026-09-13",
+            "itinerary": {
+              "@type": "Place",
+              "name": "Италия"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": 164000,
+              "priceCurrency": "RUB",
+              "availability": "https://schema.org/InStock",
+              "url": "https://northtrip.ru/#form",
+              "validThrough": "2026-09-05",
+              "seller": {
+                "@id": "https://northtrip.ru/#org"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": [
+              "Product",
+              "TouristTrip"
+            ],
+            "@id": "https://northtrip.ru/#tour-portugal",
+            "name": "Португалия · Лиссабон и океан",
+            "description": "Скалы мыса Рока, серфинг-урок для новичков, фаду в маленьком баре Алфамы и три дня на побережье Алгарве без экскурсионной гонки. 8 дней / 7 ночей, Лиссабон — Алгарве.",
+            "image": "https://northtrip.ru/images/tour-4.jpg",
+            "url": "https://northtrip.ru/#tours",
+            "brand": {
+              "@id": "https://northtrip.ru/#org"
+            },
+            "provider": {
+              "@id": "https://northtrip.ru/#org"
+            },
+            "category": "Групповой авторский тур",
+            "touristType": "Малые группы до 12 человек",
+            "startDate": "2026-09-20",
+            "endDate": "2026-09-27",
+            "itinerary": {
+              "@type": "Place",
+              "name": "Португалия"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": 148700,
+              "priceCurrency": "RUB",
+              "availability": "https://schema.org/InStock",
+              "url": "https://northtrip.ru/#form",
+              "validThrough": "2026-09-20",
+              "seller": {
+                "@id": "https://northtrip.ru/#org"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": [
+              "Product",
+              "TouristTrip"
+            ],
+            "@id": "https://northtrip.ru/#tour-swiss",
+            "name": "Швейцария · Альпы и поезда",
+            "description": "Ледниковый экспресс с панорамными окнами, подъём к Маттерхорну, вечерние сыроварни и один свободный день для лыж или прогулок. 6 дней / 5 ночей, Церматт — Гриндельвальд.",
+            "image": "https://northtrip.ru/images/tour-5.jpg",
+            "url": "https://northtrip.ru/#tours",
+            "brand": {
+              "@id": "https://northtrip.ru/#org"
+            },
+            "provider": {
+              "@id": "https://northtrip.ru/#org"
+            },
+            "category": "Групповой авторский тур",
+            "touristType": "Малые группы до 12 человек",
+            "startDate": "2026-12-14",
+            "endDate": "2026-12-19",
+            "itinerary": {
+              "@type": "Place",
+              "name": "Швейцария"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": 197300,
+              "priceCurrency": "RUB",
+              "availability": "https://schema.org/InStock",
+              "url": "https://northtrip.ru/#form",
+              "validThrough": "2026-12-14",
+              "seller": {
+                "@id": "https://northtrip.ru/#org"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": [
+              "Product",
+              "TouristTrip"
+            ],
+            "@id": "https://northtrip.ru/#tour-scotland",
+            "name": "Шотландия · Хайленд и замки",
+            "description": "Остров Скай в лучший месяц года, пешие тропы по долине Гленко, ночь в историческом поместье и дегустация на семейной вискикурне. 7 дней / 6 ночей, Эдинбург — Скай.",
+            "image": "https://northtrip.ru/images/tour-6.jpg",
+            "url": "https://northtrip.ru/#tours",
+            "brand": {
+              "@id": "https://northtrip.ru/#org"
+            },
+            "provider": {
+              "@id": "https://northtrip.ru/#org"
+            },
+            "category": "Групповой авторский тур",
+            "touristType": "Малые группы до 12 человек",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-07",
+            "itinerary": {
+              "@type": "Place",
+              "name": "Шотландия"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": 172400,
+              "priceCurrency": "RUB",
+              "availability": "https://schema.org/InStock",
+              "url": "https://northtrip.ru/#form",
+              "validThrough": "2026-10-01",
+              "seller": {
+                "@id": "https://northtrip.ru/#org"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://northtrip.ru/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Как проходит подбор тура?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Вы оставляете заявку, куратор связывается в течение 2 часов и задаёт 5–7 вопросов: даты, бюджет, темп, интересы. В течение дня присылаем 2–3 подходящих варианта с программой, ценой и честными комментариями — что понравится, а что может не подойти."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужна ли виза и помогаете ли вы с ней?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для стран Шенгена виза нужна. Мы даём список документов, проверяем анкету, готовим брони отелей и билетов и записываем в визовый центр. Консульский сбор оплачивается отдельно. При отказе по вине наших документов — возвращаем стоимость услуги."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли поехать одному?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, около 40% наших путешественников едут в одиночку. Можно взять одноместное размещение за доплату или поселиться с попутчиком того же пола — тогда доплаты нет."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какая физическая подготовка нужна?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для городских маршрутов — обычная: 8–12 км пешком в день. Для горных указываем уровень сложности в описании тура: от «прогулочного» до «требуется опыт трекинга». Куратор честно скажет, потянете ли вы конкретный маршрут."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что с оплатой и возвратом?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Бронь фиксируется предоплатой 30%, остаток — за 21 день до вылета. Возможна рассрочка на 6 месяцев без переплаты. При отмене более чем за 30 дней возвращаем всё, кроме фактических расходов (визы, невозвратные билеты)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько человек в группе и кто они?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "От 6 до 12 человек, чаще всего 8–10. Основной возраст — 25–45 лет: пары, друзья и самостоятельные путешественники. За неделю до вылета создаём чат группы, чтобы все познакомились заранее."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "А если я хочу свои даты и маршрут?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Собираем индивидуальные маршруты под запрос: от двух человек, срок подготовки — от 3 недель. Стоимость обычно на 15–25% выше группового тура, зато всё расписание подстраивается под вас."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Перейти к содержанию</a>
 
+<!-- ============ SVG-СПРАЙТ (иконки, которые повторяются) ============ -->
+<svg class="sprite" aria-hidden="true" focusable="false" width="0" height="0">
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+</svg>
+
 <!-- ============ HEADER ============ -->
 <header class="header" id="header">
   <div class="container header__inner">
     <a class="logo" href="#hero" aria-label="NorthTrip — на главную">
-      <img src="images/logo.png" alt="" width="44" height="44">
+      <picture>
+        <source type="image/avif" srcset="images/opt/logo-44.avif 1x, images/opt/logo-88.avif 2x, images/opt/logo-132.avif 3x">
+        <source type="image/webp" srcset="images/opt/logo-44.webp 1x, images/opt/logo-88.webp 2x, images/opt/logo-132.webp 3x">
+        <img src="images/opt/logo-88.png" srcset="images/opt/logo-44.png 1x, images/opt/logo-88.png 2x, images/opt/logo-132.png 3x" alt="" width="44" height="44">
+      </picture>
       <span class="logo__text">North<span>Trip</span><small>авторские маршруты</small></span>
     </a>
 
@@ -49,12 +569,18 @@
   </div>
 </header>
 
+<div class="nav-scrim" id="navScrim" aria-hidden="true"></div>
+
 <main id="main">
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="hero">
   <div class="hero__media">
-    <img src="images/hero.jpg" alt="Фьорд на рассвете: горы, снежные вершины и спокойная вода" fetchpriority="high">
+    <picture>
+      <source type="image/avif" srcset="images/opt/hero-768.avif 768w, images/opt/hero-1200.avif 1200w, images/opt/hero-1600.avif 1600w, images/opt/hero-2200.avif 2200w" sizes="100vw">
+      <source type="image/webp" srcset="images/opt/hero-768.webp 768w, images/opt/hero-1200.webp 1200w, images/opt/hero-1600.webp 1600w, images/opt/hero-2200.webp 2200w" sizes="100vw">
+      <img src="images/hero.jpg" alt="Фьорд на рассвете: горы, снежные вершины и спокойная вода" fetchpriority="high" width="2200" height="1240" decoding="async">
+    </picture>
   </div>
   <div class="container hero__inner">
     <p class="hero__kicker reveal">Авторские путешествия по Европе · 2026–2027</p>
@@ -83,7 +609,11 @@
 
     <div class="dir-grid">
       <article class="dir-card dir-card--wide reveal" data-filter="north">
-        <img src="images/dest-norway.jpg" alt="Норвежские фьорды" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="images/opt/dest-norway-480.avif 480w, images/opt/dest-norway-768.avif 768w, images/opt/dest-norway-1100.avif 1100w, images/opt/dest-norway-1400.avif 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1100px) 46vw, 600px">
+          <source type="image/webp" srcset="images/opt/dest-norway-480.webp 480w, images/opt/dest-norway-768.webp 768w, images/opt/dest-norway-1100.webp 1100w, images/opt/dest-norway-1400.webp 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1100px) 46vw, 600px">
+          <img src="images/dest-norway.jpg" alt="Норвежские фьорды" loading="lazy" width="1400" height="1000" decoding="async">
+        </picture>
         <div class="dir-card__body">
           <span class="dir-card__tag">Север</span>
           <h3>Норвегия</h3>
@@ -93,7 +623,11 @@
       </article>
 
       <article class="dir-card reveal" data-filter="north">
-        <img src="images/dest-iceland.jpg" alt="Исландия: ледники и вулканические долины" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="images/opt/dest-iceland-480.avif 480w, images/opt/dest-iceland-768.avif 768w, images/opt/dest-iceland-1100.avif 1100w, images/opt/dest-iceland-1400.avif 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1100px) 46vw, 290px">
+          <source type="image/webp" srcset="images/opt/dest-iceland-480.webp 480w, images/opt/dest-iceland-768.webp 768w, images/opt/dest-iceland-1100.webp 1100w, images/opt/dest-iceland-1400.webp 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1100px) 46vw, 290px">
+          <img src="images/dest-iceland.jpg" alt="Исландия: ледники и вулканические долины" loading="lazy" width="1400" height="1000" decoding="async">
+        </picture>
         <div class="dir-card__body">
           <span class="dir-card__tag">Север</span>
           <h3>Исландия</h3>
@@ -103,7 +637,11 @@
       </article>
 
       <article class="dir-card reveal" data-filter="city">
-        <img src="images/dest-italy.jpg" alt="Итальянский город на закате" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="images/opt/dest-italy-480.avif 480w, images/opt/dest-italy-768.avif 768w, images/opt/dest-italy-1100.avif 1100w, images/opt/dest-italy-1400.avif 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1100px) 46vw, 290px">
+          <source type="image/webp" srcset="images/opt/dest-italy-480.webp 480w, images/opt/dest-italy-768.webp 768w, images/opt/dest-italy-1100.webp 1100w, images/opt/dest-italy-1400.webp 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1100px) 46vw, 290px">
+          <img src="images/dest-italy.jpg" alt="Итальянский город на закате" loading="lazy" width="1400" height="1000" decoding="async">
+        </picture>
         <div class="dir-card__body">
           <span class="dir-card__tag">Города</span>
           <h3>Италия</h3>
@@ -113,7 +651,11 @@
       </article>
 
       <article class="dir-card reveal" data-filter="mountains">
-        <img src="images/dest-swiss.jpg" alt="Швейцарские Альпы" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="images/opt/dest-swiss-480.avif 480w, images/opt/dest-swiss-768.avif 768w, images/opt/dest-swiss-1100.avif 1100w, images/opt/dest-swiss-1400.avif 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1100px) 46vw, 290px">
+          <source type="image/webp" srcset="images/opt/dest-swiss-480.webp 480w, images/opt/dest-swiss-768.webp 768w, images/opt/dest-swiss-1100.webp 1100w, images/opt/dest-swiss-1400.webp 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1100px) 46vw, 290px">
+          <img src="images/dest-swiss.jpg" alt="Швейцарские Альпы" loading="lazy" width="1400" height="1000" decoding="async">
+        </picture>
         <div class="dir-card__body">
           <span class="dir-card__tag">Горы</span>
           <h3>Швейцария</h3>
@@ -123,7 +665,11 @@
       </article>
 
       <article class="dir-card reveal" data-filter="coast">
-        <img src="images/dest-portugal.jpg" alt="Океанское побережье Португалии" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="images/opt/dest-portugal-480.avif 480w, images/opt/dest-portugal-768.avif 768w, images/opt/dest-portugal-1100.avif 1100w, images/opt/dest-portugal-1400.avif 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1100px) 46vw, 290px">
+          <source type="image/webp" srcset="images/opt/dest-portugal-480.webp 480w, images/opt/dest-portugal-768.webp 768w, images/opt/dest-portugal-1100.webp 1100w, images/opt/dest-portugal-1400.webp 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1100px) 46vw, 290px">
+          <img src="images/dest-portugal.jpg" alt="Океанское побережье Португалии" loading="lazy" width="1400" height="1000" decoding="async">
+        </picture>
         <div class="dir-card__body">
           <span class="dir-card__tag">Побережье</span>
           <h3>Португалия</h3>
@@ -133,7 +679,11 @@
       </article>
 
       <article class="dir-card dir-card--wide reveal" data-filter="mountains">
-        <img src="images/dest-scotland.jpg" alt="Шотландский Хайленд" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="images/opt/dest-scotland-480.avif 480w, images/opt/dest-scotland-768.avif 768w, images/opt/dest-scotland-1100.avif 1100w, images/opt/dest-scotland-1400.avif 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1100px) 46vw, 600px">
+          <source type="image/webp" srcset="images/opt/dest-scotland-480.webp 480w, images/opt/dest-scotland-768.webp 768w, images/opt/dest-scotland-1100.webp 1100w, images/opt/dest-scotland-1400.webp 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1100px) 46vw, 600px">
+          <img src="images/dest-scotland.jpg" alt="Шотландский Хайленд" loading="lazy" width="1400" height="1000" decoding="async">
+        </picture>
         <div class="dir-card__body">
           <span class="dir-card__tag">Горы</span>
           <h3>Шотландия</h3>
@@ -168,15 +718,19 @@
 
       <article class="tour reveal" data-cat="north mountains" data-id="norway">
         <div class="tour__media">
-          <img src="images/tour-1.jpg" alt="Фьорды Норвегии" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="images/opt/tour-1-400.avif 400w, images/opt/tour-1-640.avif 640w, images/opt/tour-1-900.avif 900w, images/opt/tour-1-1200.avif 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 400px">
+            <source type="image/webp" srcset="images/opt/tour-1-400.webp 400w, images/opt/tour-1-640.webp 640w, images/opt/tour-1-900.webp 900w, images/opt/tour-1-1200.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 400px">
+            <img src="images/tour-1.jpg" alt="Фьорды Норвегии" loading="lazy" width="1200" height="800" decoding="async">
+          </picture>
           <span class="tour__badge">Осталось 3 места</span>
         </div>
         <div class="tour__body">
           <h3 class="tour__dir">Норвегия · Лофотены и фьорды</h3>
           <ul class="tour__facts">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>Берген — Лофотены</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>8 дней / 7 ночей</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>12–19 октября 2026</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Берген — Лофотены</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg>8 дней / 7 ночей</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar"/></svg>12–19 октября 2026</li>
           </ul>
           <p class="tour__desc">Ночёвки в рыбацких домиках рорбу, морская прогулка по Тролль-фьорду и три вечера охоты за северным сиянием с гидом-астрофотографом.</p>
           <div class="tour__foot">
@@ -188,15 +742,19 @@
 
       <article class="tour reveal" data-cat="north" data-id="iceland">
         <div class="tour__media">
-          <img src="images/tour-2.jpg" alt="Исландия" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="images/opt/tour-2-400.avif 400w, images/opt/tour-2-640.avif 640w, images/opt/tour-2-900.avif 900w, images/opt/tour-2-1200.avif 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 400px">
+            <source type="image/webp" srcset="images/opt/tour-2-400.webp 400w, images/opt/tour-2-640.webp 640w, images/opt/tour-2-900.webp 900w, images/opt/tour-2-1200.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 400px">
+            <img src="images/tour-2.jpg" alt="Исландия" loading="lazy" width="1200" height="800" decoding="async">
+          </picture>
           <span class="tour__badge">Хит сезона</span>
         </div>
         <div class="tour__body">
           <h3 class="tour__dir">Исландия · Огонь и лёд</h3>
           <ul class="tour__facts">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>Кольцевая дорога</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>7 дней / 6 ночей</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>3–9 ноября 2026</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Кольцевая дорога</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg>7 дней / 6 ночей</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar"/></svg>3–9 ноября 2026</li>
           </ul>
           <p class="tour__desc">Ледниковая лагуна Йёкюльсаурлоун, чёрные пляжи Вика, прогулка по леднику с инструктором и вечера в горячих источниках вдали от толп.</p>
           <div class="tour__foot">
@@ -208,15 +766,19 @@
 
       <article class="tour reveal" data-cat="city" data-id="italy">
         <div class="tour__media">
-          <img src="images/tour-3.jpg" alt="Италия" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="images/opt/tour-3-400.avif 400w, images/opt/tour-3-640.avif 640w, images/opt/tour-3-900.avif 900w, images/opt/tour-3-1200.avif 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 400px">
+            <source type="image/webp" srcset="images/opt/tour-3-400.webp 400w, images/opt/tour-3-640.webp 640w, images/opt/tour-3-900.webp 900w, images/opt/tour-3-1200.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 400px">
+            <img src="images/tour-3.jpg" alt="Италия" loading="lazy" width="1200" height="800" decoding="async">
+          </picture>
           <span class="tour__badge">Для первого раза</span>
         </div>
         <div class="tour__body">
           <h3 class="tour__dir">Италия · Рим, Флоренция, Тоскана</h3>
           <ul class="tour__facts">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>3 города + винодельни</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>9 дней / 8 ночей</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>5–13 сентября 2026</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>3 города + винодельни</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg>9 дней / 8 ночей</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar"/></svg>5–13 сентября 2026</li>
           </ul>
           <p class="tour__desc">Утренний Рим до открытия музеев, ужин у флорентийского шефа и два дня среди холмов Валь-д’Орча с дегустацией в семейном хозяйстве.</p>
           <div class="tour__foot">
@@ -228,15 +790,19 @@
 
       <article class="tour reveal" data-cat="coast" data-id="portugal">
         <div class="tour__media">
-          <img src="images/tour-4.jpg" alt="Побережье Португалии" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="images/opt/tour-4-400.avif 400w, images/opt/tour-4-640.avif 640w, images/opt/tour-4-900.avif 900w, images/opt/tour-4-1200.avif 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 400px">
+            <source type="image/webp" srcset="images/opt/tour-4-400.webp 400w, images/opt/tour-4-640.webp 640w, images/opt/tour-4-900.webp 900w, images/opt/tour-4-1200.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 400px">
+            <img src="images/tour-4.jpg" alt="Побережье Португалии" loading="lazy" width="1200" height="800" decoding="async">
+          </picture>
           <span class="tour__badge">Мягкий климат</span>
         </div>
         <div class="tour__body">
           <h3 class="tour__dir">Португалия · Лиссабон и океан</h3>
           <ul class="tour__facts">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>Лиссабон — Алгарве</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>8 дней / 7 ночей</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>20–27 сентября 2026</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Лиссабон — Алгарве</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg>8 дней / 7 ночей</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar"/></svg>20–27 сентября 2026</li>
           </ul>
           <p class="tour__desc">Скалы мыса Рока, серфинг-урок для новичков, фаду в маленьком баре Алфамы и три дня на побережье Алгарве без экскурсионной гонки.</p>
           <div class="tour__foot">
@@ -248,15 +814,19 @@
 
       <article class="tour reveal" data-cat="mountains" data-id="swiss">
         <div class="tour__media">
-          <img src="images/tour-5.jpg" alt="Швейцарские Альпы" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="images/opt/tour-5-400.avif 400w, images/opt/tour-5-640.avif 640w, images/opt/tour-5-900.avif 900w, images/opt/tour-5-1200.avif 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 400px">
+            <source type="image/webp" srcset="images/opt/tour-5-400.webp 400w, images/opt/tour-5-640.webp 640w, images/opt/tour-5-900.webp 900w, images/opt/tour-5-1200.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 400px">
+            <img src="images/tour-5.jpg" alt="Швейцарские Альпы" loading="lazy" width="1200" height="800" decoding="async">
+          </picture>
           <span class="tour__badge">Зимние даты</span>
         </div>
         <div class="tour__body">
           <h3 class="tour__dir">Швейцария · Альпы и поезда</h3>
           <ul class="tour__facts">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>Церматт — Гриндельвальд</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>6 дней / 5 ночей</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>14–19 декабря 2026</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Церматт — Гриндельвальд</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg>6 дней / 5 ночей</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar"/></svg>14–19 декабря 2026</li>
           </ul>
           <p class="tour__desc">Ледниковый экспресс с панорамными окнами, подъём к Маттерхорну, вечерние сыроварни и один день полностью свободен для лыж или прогулок.</p>
           <div class="tour__foot">
@@ -268,15 +838,19 @@
 
       <article class="tour reveal" data-cat="mountains north" data-id="scotland">
         <div class="tour__media">
-          <img src="images/tour-6.jpg" alt="Шотландский Хайленд" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="images/opt/tour-6-400.avif 400w, images/opt/tour-6-640.avif 640w, images/opt/tour-6-900.avif 900w, images/opt/tour-6-1200.avif 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 400px">
+            <source type="image/webp" srcset="images/opt/tour-6-400.webp 400w, images/opt/tour-6-640.webp 640w, images/opt/tour-6-900.webp 900w, images/opt/tour-6-1200.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 400px">
+            <img src="images/tour-6.jpg" alt="Шотландский Хайленд" loading="lazy" width="1200" height="800" decoding="async">
+          </picture>
           <span class="tour__badge">Малая группа · 8 человек</span>
         </div>
         <div class="tour__body">
           <h3 class="tour__dir">Шотландия · Хайленд и замки</h3>
           <ul class="tour__facts">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>Эдинбург — Скай</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>7 дней / 6 ночей</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>1–7 октября 2026</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Эдинбург — Скай</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg>7 дней / 6 ночей</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar"/></svg>1–7 октября 2026</li>
           </ul>
           <p class="tour__desc">Остров Скай в лучший месяц года, пешие тропы по долине Гленко, ночь в историческом поместье и дегустация на семейной вискикурне.</p>
           <div class="tour__foot">
@@ -301,7 +875,11 @@
 <section class="section included" id="included">
   <div class="container included__grid">
     <div class="included__media reveal">
-      <img src="images/photo2.jpg" alt="Вечерний город во время путешествия" loading="lazy">
+      <picture>
+        <source type="image/avif" srcset="images/opt/photo2-560.avif 560w, images/opt/photo2-900.avif 900w, images/opt/photo2-1300.avif 1300w, images/opt/photo2-1600.avif 1600w" sizes="(max-width: 1100px) 92vw, 520px">
+        <source type="image/webp" srcset="images/opt/photo2-560.webp 560w, images/opt/photo2-900.webp 900w, images/opt/photo2-1300.webp 1300w, images/opt/photo2-1600.webp 1600w" sizes="(max-width: 1100px) 92vw, 520px">
+        <img src="images/photo2.jpg" alt="Вечерний город во время путешествия" loading="lazy" width="1600" height="1100" decoding="async">
+      </picture>
       <div class="included__note">
         <strong>Без скрытых доплат</strong>
         <span>Финальная стоимость фиксируется в договоре и не меняется</span>
@@ -382,7 +960,11 @@
         <p>Куратор на связи с момента заявки и до возвращения домой. В любом часовом поясе.</p>
       </article>
       <article class="why__card why__card--wide reveal">
-        <div class="why__media"><img src="images/photo1.jpg" alt="Горы на закате" loading="lazy"></div>
+        <div class="why__media"><picture>
+  <source type="image/avif" srcset="images/opt/photo1-560.avif 560w, images/opt/photo1-900.avif 900w, images/opt/photo1-1300.avif 1300w, images/opt/photo1-1600.avif 1600w" sizes="(max-width: 1100px) 92vw, 610px">
+  <source type="image/webp" srcset="images/opt/photo1-560.webp 560w, images/opt/photo1-900.webp 900w, images/opt/photo1-1300.webp 1300w, images/opt/photo1-1600.webp 1600w" sizes="(max-width: 1100px) 92vw, 610px">
+  <img src="images/photo1.jpg" alt="Горы на закате" loading="lazy" width="1600" height="1100" decoding="async">
+</picture></div>
         <div class="why__quote">
           <p>«Мы считаем поездку удачной, если через год вы помните не список мест, а один конкретный вечер».</p>
           <span>Анна Северова, основатель NorthTrip</span>
@@ -404,28 +986,60 @@
 
   <div class="gal-grid container">
     <button class="gal-item gal-item--tall reveal" data-full="images/gal-1.jpg" data-caption="Перевал на закате, Доломиты · июнь 2026">
-      <img src="images/gal-1.jpg" alt="Горный перевал на закате" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+      <picture>
+        <source type="image/avif" srcset="images/opt/gal-1-400.avif 400w, images/opt/gal-1-700.avif 700w, images/opt/gal-1-1000.avif 1000w, images/opt/gal-1-1300.avif 1300w" sizes="(max-width: 900px) 46vw, 300px">
+        <source type="image/webp" srcset="images/opt/gal-1-400.webp 400w, images/opt/gal-1-700.webp 700w, images/opt/gal-1-1000.webp 1000w, images/opt/gal-1-1300.webp 1300w" sizes="(max-width: 900px) 46vw, 300px">
+        <img src="images/gal-1.jpg" alt="Горный перевал на закате" loading="lazy" width="1300" height="1000" decoding="async">
+      </picture><span class="gal-item__zoom" aria-hidden="true"></span>
     </button>
     <button class="gal-item reveal" data-full="images/gal-2.jpg" data-caption="Вечерний Лиссабон · сентябрь 2025">
-      <img src="images/gal-2.jpg" alt="Вечерний город с огнями" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+      <picture>
+        <source type="image/avif" srcset="images/opt/gal-2-400.avif 400w, images/opt/gal-2-700.avif 700w, images/opt/gal-2-1000.avif 1000w, images/opt/gal-2-1400.avif 1400w" sizes="(max-width: 900px) 46vw, 300px">
+        <source type="image/webp" srcset="images/opt/gal-2-400.webp 400w, images/opt/gal-2-700.webp 700w, images/opt/gal-2-1000.webp 1000w, images/opt/gal-2-1400.webp 1400w" sizes="(max-width: 900px) 46vw, 300px">
+        <img src="images/gal-2.jpg" alt="Вечерний город с огнями" loading="lazy" width="1400" height="1000" decoding="async">
+      </picture><span class="gal-item__zoom" aria-hidden="true"></span>
     </button>
     <button class="gal-item reveal" data-full="images/gal-3.jpg" data-caption="Атлантика у мыса Рока · май 2025">
-      <img src="images/gal-3.jpg" alt="Океанское побережье" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+      <picture>
+        <source type="image/avif" srcset="images/opt/gal-3-400.avif 400w, images/opt/gal-3-700.avif 700w, images/opt/gal-3-1000.avif 1000w, images/opt/gal-3-1400.avif 1400w" sizes="(max-width: 900px) 46vw, 300px">
+        <source type="image/webp" srcset="images/opt/gal-3-400.webp 400w, images/opt/gal-3-700.webp 700w, images/opt/gal-3-1000.webp 1000w, images/opt/gal-3-1400.webp 1400w" sizes="(max-width: 900px) 46vw, 300px">
+        <img src="images/gal-3.jpg" alt="Океанское побережье" loading="lazy" width="1400" height="1000" decoding="async">
+      </picture><span class="gal-item__zoom" aria-hidden="true"></span>
     </button>
     <button class="gal-item gal-item--tall reveal" data-full="images/gal-4.jpg" data-caption="Утро во фьорде, Лофотены · март 2026">
-      <img src="images/gal-4.jpg" alt="Утро во фьорде" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+      <picture>
+        <source type="image/avif" srcset="images/opt/gal-4-400.avif 400w, images/opt/gal-4-700.avif 700w, images/opt/gal-4-1000.avif 1000w, images/opt/gal-4-1300.avif 1300w" sizes="(max-width: 900px) 46vw, 300px">
+        <source type="image/webp" srcset="images/opt/gal-4-400.webp 400w, images/opt/gal-4-700.webp 700w, images/opt/gal-4-1000.webp 1000w, images/opt/gal-4-1300.webp 1300w" sizes="(max-width: 900px) 46vw, 300px">
+        <img src="images/gal-4.jpg" alt="Утро во фьорде" loading="lazy" width="1300" height="1000" decoding="async">
+      </picture><span class="gal-item__zoom" aria-hidden="true"></span>
     </button>
     <button class="gal-item gal-item--wide reveal" data-full="images/gal-5.jpg" data-caption="Холмы Тосканы · сентябрь 2025">
-      <img src="images/gal-5.jpg" alt="Холмы на рассвете" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+      <picture>
+        <source type="image/avif" srcset="images/opt/gal-5-400.avif 400w, images/opt/gal-5-700.avif 700w, images/opt/gal-5-1000.avif 1000w, images/opt/gal-5-1400.avif 1400w" sizes="(max-width: 900px) 46vw, 610px">
+        <source type="image/webp" srcset="images/opt/gal-5-400.webp 400w, images/opt/gal-5-700.webp 700w, images/opt/gal-5-1000.webp 1000w, images/opt/gal-5-1400.webp 1400w" sizes="(max-width: 900px) 46vw, 610px">
+        <img src="images/gal-5.jpg" alt="Холмы на рассвете" loading="lazy" width="1400" height="1000" decoding="async">
+      </picture><span class="gal-item__zoom" aria-hidden="true"></span>
     </button>
     <button class="gal-item reveal" data-full="images/gal-6.jpg" data-caption="Скалы Алгарве · октябрь 2025">
-      <img src="images/gal-6.jpg" alt="Скалы над океаном" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+      <picture>
+        <source type="image/avif" srcset="images/opt/gal-6-400.avif 400w, images/opt/gal-6-700.avif 700w, images/opt/gal-6-1000.avif 1000w, images/opt/gal-6-1300.avif 1300w" sizes="(max-width: 900px) 46vw, 300px">
+        <source type="image/webp" srcset="images/opt/gal-6-400.webp 400w, images/opt/gal-6-700.webp 700w, images/opt/gal-6-1000.webp 1000w, images/opt/gal-6-1300.webp 1300w" sizes="(max-width: 900px) 46vw, 300px">
+        <img src="images/gal-6.jpg" alt="Скалы над океаном" loading="lazy" width="1300" height="1000" decoding="async">
+      </picture><span class="gal-item__zoom" aria-hidden="true"></span>
     </button>
     <button class="gal-item gal-item--wide reveal" data-full="images/gal-7.jpg" data-caption="Синий час в Порту · апрель 2026">
-      <img src="images/gal-7.jpg" alt="Город в синий час" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+      <picture>
+        <source type="image/avif" srcset="images/opt/gal-7-400.avif 400w, images/opt/gal-7-700.avif 700w, images/opt/gal-7-1000.avif 1000w, images/opt/gal-7-1400.avif 1400w" sizes="(max-width: 900px) 46vw, 610px">
+        <source type="image/webp" srcset="images/opt/gal-7-400.webp 400w, images/opt/gal-7-700.webp 700w, images/opt/gal-7-1000.webp 1000w, images/opt/gal-7-1400.webp 1400w" sizes="(max-width: 900px) 46vw, 610px">
+        <img src="images/gal-7.jpg" alt="Город в синий час" loading="lazy" width="1400" height="1000" decoding="async">
+      </picture><span class="gal-item__zoom" aria-hidden="true"></span>
     </button>
     <button class="gal-item reveal" data-full="images/gal-8.jpg" data-caption="Хайленд после дождя · октябрь 2025">
-      <img src="images/gal-8.jpg" alt="Шотландские холмы после дождя" loading="lazy"><span class="gal-item__zoom" aria-hidden="true"></span>
+      <picture>
+        <source type="image/avif" srcset="images/opt/gal-8-400.avif 400w, images/opt/gal-8-700.avif 700w, images/opt/gal-8-1000.avif 1000w, images/opt/gal-8-1400.avif 1400w" sizes="(max-width: 900px) 46vw, 300px">
+        <source type="image/webp" srcset="images/opt/gal-8-400.webp 400w, images/opt/gal-8-700.webp 700w, images/opt/gal-8-1000.webp 1000w, images/opt/gal-8-1400.webp 1400w" sizes="(max-width: 900px) 46vw, 300px">
+        <img src="images/gal-8.jpg" alt="Шотландские холмы после дождя" loading="lazy" width="1400" height="1000" decoding="async">
+      </picture><span class="gal-item__zoom" aria-hidden="true"></span>
     </button>
   </div>
 </section>
@@ -492,11 +1106,11 @@
 
       <div class="slider__controls">
         <button class="slider__arrow" id="prevSlide" aria-label="Предыдущий отзыв">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-left"/></svg>
         </button>
         <div class="slider__dots" id="sliderDots" role="group" aria-label="Выбор отзыва"></div>
         <button class="slider__arrow" id="nextSlide" aria-label="Следующий отзыв">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
         </button>
       </div>
     </div>
@@ -548,7 +1162,11 @@
 
 <!-- ============ FORM ============ -->
 <section class="section form-sec" id="form">
-  <div class="form-sec__bg"><img src="images/cta.jpg" alt="" loading="lazy"></div>
+  <div class="form-sec__bg"><picture>
+  <source type="image/avif" srcset="images/opt/cta-768.avif 768w, images/opt/cta-1280.avif 1280w, images/opt/cta-2000.avif 2000w" sizes="100vw">
+  <source type="image/webp" srcset="images/opt/cta-768.webp 768w, images/opt/cta-1280.webp 1280w, images/opt/cta-2000.webp 2000w" sizes="100vw">
+  <img src="images/cta.jpg" alt="" loading="lazy" width="2000" height="900" decoding="async">
+</picture></div>
   <div class="container form-sec__inner">
 
     <div class="form-sec__intro reveal">
@@ -667,9 +1285,9 @@
         <p>Ответим в течение рабочего дня</p>
       </a>
       <div class="contact-card reveal">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>
         <h3>Санкт-Петербург</h3>
-        <p>наб. реки Мойки, 34, офис 210<br>Встречи — по договорённости</p>
+        <address>наб. реки Мойки, 34, офис 210<br>Встречи — по договорённости</address>
       </div>
       <div class="contact-card reveal">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v13H4z"/><path d="M4 9h16"/><circle cx="7" cy="12.5" r="1"/><circle cx="11" cy="12.5" r="1"/></svg>
@@ -697,7 +1315,11 @@
   <div class="container footer__inner">
     <div class="footer__brand">
       <a class="logo logo--light" href="#hero">
-        <img src="images/logo.png" alt="" width="40" height="40">
+        <picture>
+          <source type="image/avif" srcset="images/opt/logo-44.avif 1x, images/opt/logo-88.avif 2x, images/opt/logo-132.avif 3x">
+          <source type="image/webp" srcset="images/opt/logo-44.webp 1x, images/opt/logo-88.webp 2x, images/opt/logo-132.webp 3x">
+          <img src="images/opt/logo-88.png" srcset="images/opt/logo-44.png 1x, images/opt/logo-88.png 2x, images/opt/logo-132.png 3x" alt="" width="40" height="40">
+        </picture>
         <span class="logo__text">North<span>Trip</span><small>авторские маршруты</small></span>
       </a>
       <p>Авторские путешествия по Европе с 2017 года. Туроператор РТО № 021645.</p>
@@ -734,9 +1356,15 @@
   <div class="modal__backdrop" data-close></div>
   <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal__close" data-close aria-label="Закрыть">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-close"/></svg>
     </button>
-    <div class="modal__media"><img id="modalImg" src="" alt=""></div>
+    <div class="modal__media">
+      <picture>
+        <source id="modalAvif" type="image/avif">
+        <source id="modalWebp" type="image/webp">
+        <img id="modalImg" src="" alt="" width="1200" height="800" decoding="async">
+      </picture>
+    </div>
     <div class="modal__body">
       <p class="eyebrow" id="modalTag"></p>
       <h3 id="modalTitle"></h3>
@@ -755,17 +1383,21 @@
 <!-- ============ LIGHTBOX ============ -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" hidden>
   <button class="lightbox__close" data-lb-close aria-label="Закрыть просмотр">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-close"/></svg>
   </button>
   <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Предыдущее фото">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-left"/></svg>
   </button>
   <figure class="lightbox__figure">
-    <img id="lbImg" src="" alt="">
+    <picture>
+      <source id="lbAvif" type="image/avif">
+      <source id="lbWebp" type="image/webp">
+      <img id="lbImg" src="" alt="" decoding="async">
+    </picture>
     <figcaption id="lbCaption"></figcaption>
   </figure>
   <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Следующее фото">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
   </button>
 </div>
 

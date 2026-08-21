@@ -47,6 +47,17 @@
     else if (!e.shiftKey && (outside || active === last)) { e.preventDefault(); first.focus(); }
   };
 
+  /* ---------- Адаптивные картинки в модалках ----------
+     Наборы avif/webp уже описаны в разметке (см. tools/build-images.py),
+     поэтому модалка и лайтбокс копируют srcset из <picture> нужной карточки,
+     а не собирают пути заново. */
+  const copyPicture = (from, avif, webp, sizes) => {
+    if (!from) return;
+    avif.srcset = $('source[type="image/avif"]', from).srcset;
+    webp.srcset = $('source[type="image/webp"]', from).srcset;
+    avif.sizes = webp.sizes = sizes;
+  };
+
   /* ---------- Данные туров для модального окна ---------- */
   const TOURS = {
     norway: {
@@ -193,9 +204,11 @@
   }
 
   /* ---------- Мобильное меню ---------- */
+  const navScrim = $('#navScrim');
   let menuOpen = false;
   const closeMenu = () => {
     nav.classList.remove('is-open');
+    navScrim.classList.remove('is-open');
     burger.classList.remove('is-open');
     burger.setAttribute('aria-expanded', 'false');
     burger.setAttribute('aria-label', 'Открыть меню');
@@ -204,11 +217,16 @@
   burger.addEventListener('click', () => {
     const open = !nav.classList.contains('is-open');
     nav.classList.toggle('is-open', open);
+    navScrim.classList.toggle('is-open', open);
     burger.classList.toggle('is-open', open);
     burger.setAttribute('aria-expanded', String(open));
     burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
     if (open !== menuOpen) { menuOpen = open; open ? lockScroll() : unlockScroll(); }
   });
+  // Тап по затемнению — закрыть меню (плюс общий клик мимо меню)
+  navScrim.addEventListener('click', closeMenu);
+  // При повороте экрана / переходе на десктоп off-canvas исчезает — снимаем блокировку скролла
+  window.matchMedia('(min-width: 901px)').addEventListener('change', e => { if (e.matches) closeMenu(); });
   document.addEventListener('click', e => {
     if (nav.classList.contains('is-open') && !nav.contains(e.target) && !burger.contains(e.target)) closeMenu();
   });
@@ -341,6 +359,8 @@
     if (!data) return;
     lastFocused = document.activeElement;
 
+    copyPicture($(`.tour[data-id="${id}"] picture`), $('#modalAvif'), $('#modalWebp'),
+                '(max-width: 900px) 92vw, 440px');
     $('#modalImg').src = data.img;
     $('#modalImg').alt = data.alt;
     $('#modalTag').textContent = data.tag;
@@ -385,6 +405,7 @@
   const showPhoto = i => {
     lbIndex = (i + galItems.length) % galItems.length;
     const item = galItems[lbIndex];
+    copyPicture($('picture', item), $('#lbAvif'), $('#lbWebp'), '92vw');
     lbImg.src = item.dataset.full;
     lbImg.alt = $('img', item).alt;
     lbCaption.textContent = item.dataset.caption;
